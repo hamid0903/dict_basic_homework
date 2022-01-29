@@ -7,4 +7,15 @@ def count_all(txt):
     Returns:
         dict: dictionary with letters and digits
     """
-    return
+    letters=0
+    digits=0
+    idx=0
+    while idx<len(txt):
+        if txt[idx].isalpha():
+            letters+=1
+        if txt[idx].isdigit():
+            digits+=1
+        idx+=1
+    ans={"letters=":letters, "digits=":digits}
+    return ans
+print(count_all("Iphone 6 and samsung 20"))
